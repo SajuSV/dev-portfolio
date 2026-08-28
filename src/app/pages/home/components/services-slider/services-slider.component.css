@@ -1,0 +1,229 @@
+.figure-service {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 540px;
+  background-color: #181818;
+  color: #fff;
+  padding: 80px 50px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.figure-service:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.figure-service:hover .figure-service__icon {
+  color: #b68c70;
+}
+
+.figure-service:hover h3 {
+  color: #b68c70;
+}
+
+.figure-service h3 {
+  color: #b68c70;
+}
+
+.figure-service:after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background-color: rgba(136, 136, 136, 0.2);
+}
+
+.figure-service__number {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -44%);
+  color: #888888;
+}
+
+@media only screen and (max-width: 991px) {
+  .figure-service:hover .figure-service__number {
+      font-size: 11px;
+      letter-spacing: 0.8px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  .figure-service__number {
+      opacity: 0;
+      display: none;
+    }
+
+  /* The description is normally revealed only on hover (via GSAP
+     SplitText + FigureServiceDirective), which already resets it to
+     visible for widths under 769px on initial load. This is a CSS
+     backstop so it always shows on mobile even if the JS check ran
+     before a resize/orientation change - overriding the inline
+     opacity/transform GSAP sets on the split text lines. */
+  .figure-service__header p,
+  .figure-service__header p .split-line {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+    }
+}
+
+.figure-service__icon {
+  /* Anchored to the card's bottom edge (like .figure-service__number)
+     instead of being pushed down by margin-top: auto, which made its
+     position depend on how many lines the header/description wrapped
+     to - the longer "Web Development" description pushed that card's
+     icon lower than the others. */
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 148px;
+  height: 148px;
+  border-radius: 100%;
+  border: 1px solid rgba(136, 136, 136, 0.2);
+  color: #666666;
+  font-size: 48px;
+}
+
+.figure-service__icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  stroke: rgba(136, 136, 136, 0.2);
+  stroke-width: 1px;
+  z-index: 50;
+}
+
+@media only screen and (max-width: 1400px) {
+  .figure-service {
+      height: 500px;
+      padding: 30px 30px 30px;
+    }
+
+  .figure-service__icon {
+      bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+  .figure-service {
+      height: 400px;
+    }
+
+  .figure-service__icon {
+      width: 98px;
+      height: 98px;
+      font-size: 36px;
+    }
+
+  .figure-service__icon svg {
+      width: 100px;
+      height: 100px;
+    }
+}
+
+.slider__arrows {
+  margin-left: -36px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.slider__counter {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #888888;
+  height: 12px;
+}
+
+@media only screen and (max-width: 991px) {
+  .slider__counter {
+      font-size: 11px;
+      letter-spacing: 0.8px;
+    }
+}
+
+.slider__counter_current {
+  color: #b68c70;
+  margin-right: 30px;
+}
+
+.slider__counter_total {
+  margin-left: 30px;
+}
+
+.slider__progress {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.slider__progressbar,
+.swiper-pagination-progressbar.slider__progressbar {
+  position: relative;
+  width: 160px;
+  height: 2px;
+  background: #dcdcdc;
+}
+
+.slider__progressbar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #b68c70;
+  transform-origin: left center;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@media only screen and (max-width: 1400px) {
+  .slider__arrows {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+  .slider__arrows {
+      margin-left: -20px;
+    }
+
+  .slider__counter_current {
+      margin-right: 15px;
+    }
+
+  .slider__counter_total {
+      margin-left: 15px;
+    }
+
+  .slider__progressbar,
+    .swiper-pagination-progressbar.slider__progressbar {
+      width: 100px;
+    }
+}

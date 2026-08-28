@@ -1,0 +1,119 @@
+.aside-next__inner {
+  display: block;
+  border-top: 1px solid rgba(136, 136, 136, 0.2);
+  padding: 80px 0;
+}
+
+.aside-next__inner h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #181818;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-delay: 100ms;
+}
+
+.aside-next__inner:hover h3 {
+  transition-delay: 50ms;
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.aside-next__inner:hover .aside-next__label {
+  transition-delay: 0ms;
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.aside-next__inner:hover .aside-next__wrapper-button {
+  transition-delay: 100ms;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0px);
+}
+
+.aside-next__label {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #b68c70;
+  margin-bottom: 12px;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-delay: 100ms;
+}
+
+@media only screen and (max-width: 991px) {
+  .aside-next__label {
+      font-size: 11px;
+      letter-spacing: 0.8px;
+    }
+}
+
+.aside-next__content {
+  text-align: center;
+}
+
+.aside-next__wrapper-button {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 1400px) {
+  .aside-next__inner {
+      padding: 50px 0;
+    }
+}
+
+.button-square {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Material Icons";
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: "liga";
+  ms-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  width: 64px;
+  height: 64px;
+  text-transform: none;
+  padding: 0;
+  font-size: 20px;
+  font-weight: normal;
+  border: 1px solid rgba(136, 136, 136, 0.2);
+  cursor: pointer;
+}
+
+.button-square svg {
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  stroke: #b68c70;
+  stroke-width: 4px;
+}
+
+@media only screen and (max-width: 991px) {
+  .button-square {
+      width: 48px;
+      height: 48px;
+      font-size: 16px;
+    }
+}

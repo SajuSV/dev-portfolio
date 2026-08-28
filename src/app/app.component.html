@@ -1,0 +1,14 @@
+<app-preloader
+  [curtainClass]="headerVariant === 'main' ? 'bg-light' : 'bg-white'"
+></app-preloader>
+
+<div class="page-wrapper">
+  <app-site-header
+    *ngIf="headerVariant !== 'none'"
+    [variant]="headerVariant === 'main' ? 'main' : 'detail'"
+  ></app-site-header>
+
+  <router-outlet></router-outlet>
+
+  <app-site-footer *ngIf="showFooter"></app-site-footer>
+</div>

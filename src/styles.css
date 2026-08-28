@@ -1,0 +1,21 @@
+/* Global styles: original template stylesheets, copied verbatim so all
+   existing visual styling keeps working unchanged. Note: vendor.css already
+   bundles Swiper's base CSS, so no separate 'swiper/css' import is needed. */
+@import 'assets/css/vendor.css';
+@import 'assets/css/main.css';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Safety net for the .overflow__curtain reveal wipe (see
+   shared/directives/curtain-image.directive.ts): the curtain sits at
+   z-index 50 directly on top of the image with no CSS transform, so if JS
+   is ever slow/unavailable the curtain would otherwise cover the image
+   permanently. This mirrors the directive's initial gsap.set() position so
+   the image is never stuck hidden. */
+.overflow__curtain {
+  transform: translate(-100%, -99%);
+}

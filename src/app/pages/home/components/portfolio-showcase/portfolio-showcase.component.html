@@ -1,0 +1,31 @@
+<section class="section section_mb section-portfolio">
+  <div class="container">
+    <div class="section-portfolio__wrapper-item" *ngFor="let item of items">
+      <div
+        class="row figure-portfolio justify-content-{{ item.justify }} figure-portfolio_{{ item.orientation }} figure-portfolio_{{ item.align }}"
+        data-os-animation
+        appFigurePortfolioReveal
+      >
+        <a class="figure-portfolio__link col {{ item.colClass }}" [routerLink]="item.link" appFigurePortfolioHover>
+          <div class="figure-portfolio__wrapper-img overflow" appCurtainImage>
+            <div class="overflow__curtain bg-accent"></div>
+            <div class="overflow__content">
+              <img
+                [src]="item.image"
+                [width]="item.imageWidth"
+                [height]="item.imageHeight"
+                loading="lazy"
+                [alt]="item.alt"
+              />
+            </div>
+          </div>
+          <div class="figure-portfolio__info">{{ item.info }}</div>
+          <header class="figure-portfolio__header">
+            <div class="figure-portfolio__headline"></div>
+            <h2>{{ item.title }}</h2>
+          </header>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

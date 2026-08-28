@@ -1,0 +1,15 @@
+<div class="portfolio-details__options bg-white">
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-lg-4 col-sm-6 portfolio-details__option"
+        *ngFor="let option of options"
+      >
+        <div class="figure-info">
+          <div class="figure-info__option">{{ option.label }}</div>
+          <div class="figure-info__value">{{ option.value }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.wrapper {
+  background-color: black;
+  padding: 100px;
+}
+
+@media only screen and (max-width: 991px) {
+  .wrapper {
+      padding: 50px;
+      background-color: unset;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+      padding: 0px;
+    }
+}
+
+.scroll-cards {
+  position: relative;
+}
+
+.scroll-cards__item+.scroll-cards__item {}
+
+.scroll-cards__item {
+  position: sticky;
+  top: max(1vh, 1em);
+  
+  overflow: hidden;
+}
+
+.scroll-cards__item img {
+  display: block;
+  width: 100%;
+}

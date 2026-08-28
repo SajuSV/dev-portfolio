@@ -1,0 +1,9 @@
+.counter {
+  padding: 10px 0px 100px 0;
+}
+
+.counter span {
+  padding-bottom: 50px;
+  font-size: clamp(4rem, 4vw, 5rem);
+  color: #888888;
+}

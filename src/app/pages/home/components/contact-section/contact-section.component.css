@@ -1,0 +1,53 @@
+.figure-contact-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #181818;
+  color: #fff;
+  padding: 80px 50px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.figure-contact-card:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.figure-contact-card:hover h3 {
+  color: #b68c70;
+}
+
+.figure-contact-card h3 {
+  color: #b68c70;
+}
+.figure-contact-card:first-child::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: rgba(136, 136, 136, 0.2);
+}
+.figure-contact-card:after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background-color: rgba(136, 136, 136, 0.2);
+}
+
+@media only screen and (max-width: 1400px) {
+  .figure-contact-card {
+      padding: 30px 30px 30px;
+    }
+}

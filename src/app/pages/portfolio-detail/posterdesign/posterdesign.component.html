@@ -1,0 +1,20 @@
+<article class="portfolio-details bg-light">
+  <app-portfolio-masthead pageTitle="Poster Design" tag="Photoshop"></app-portfolio-masthead>
+
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col">
+        <img class="img-fullwidth" [src]="heroImage" width="1760" height="1173" loading="lazy" alt="" />
+      </div>
+    </div>
+
+    <app-portfolio-options [options]="options"></app-portfolio-options>
+    <app-portfolio-quote [text]="quote"></app-portfolio-quote>
+  </div>
+
+  <app-design-masonry-grid></app-design-masonry-grid>
+
+  <a style="padding-left: 20px;" target="_blank" [href]="behanceUrl">.</a>
+
+  <app-portfolio-next-link nextPath="/logodesign" nextTitle="Logo Design"></app-portfolio-next-link>
+</article>

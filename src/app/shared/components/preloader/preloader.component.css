@@ -1,0 +1,69 @@
+.preloader {
+  /* Visibility/opacity are driven directly by GSAP (autoAlpha) in
+     PreloaderComponent's finish() timeline, matching the original
+     preloader.curtainsUp()/finish() choreography - no CSS transition
+     needed here. */
+}
+
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.preloader.bg-dark .preloader__curtain,
+.preloader.bg-black .preloader__curtain {
+  background-color: #222;
+}
+
+.preloader.bg-light .preloader__curtain,
+.preloader.bg-white .preloader__curtain {
+  background-color: #f8f8f8;
+}
+
+.preloader__curtain {
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+.preloader__wrapper-logo {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.preloader__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 290px;
+  height: 145px;
+  outline: 2px solid rgba(136, 136, 136, 0.2);
+  outline-offset: -2px;
+}
+
+.preloader__logo svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke-width: 3px;
+}
+
+@media only screen and (max-width: 991px) {
+  .preloader__logo {
+      width: 220px;
+      height: 110px;
+    }
+}

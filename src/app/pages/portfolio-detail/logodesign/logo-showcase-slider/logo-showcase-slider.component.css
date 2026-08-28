@@ -1,0 +1,147 @@
+.slider__controls {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__dot {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin: 16px 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.slider__dot:before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #888888;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.slider__dot:after {
+  content: "";
+  display: block;
+  border-radius: 100%;
+  border: 1px solid #888888;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.slider__dot:hover:after {
+  transform: scale(1);
+}
+
+.slider__counter-big {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.slider__counter-big:after {
+  content: "";
+  width: 1px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: rgba(136, 136, 136, 0.2);
+  transform: skew(-45deg);
+}
+
+.slider__counter-big-current {
+  position: absolute;
+  height: 36px;
+  top: -20px;
+  left: -10px;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.slider__counter-big-total {
+  position: absolute;
+  bottom: -4px;
+  right: -2px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  color: #888888;
+}
+
+.slider__dots,
+.slider__dots.swiper-pagination-bullets {
+  width: auto;
+}
+
+@media only screen and (max-width: 991px) {
+  .slider__controls {
+      flex-direction: row;
+      margin-top: 16px;
+    }
+
+  .slider__dot {
+      margin: 0 8px;
+    }
+
+  .slider__dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+    }
+
+  .slider__counter-big {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+    }
+}
+
+.slider-testimonials {
+  color: #fff;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.slider-testimonials__arrow {
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+}
+
+.slider-testimonials__arrow:hover {
+  background-color: transparent;
+}
+
+.slider-testimonials__counter-big-current {
+  color: #fff;
+}
+
+@media only screen and (max-width: 991px) {
+  .slider-testimonials {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+}

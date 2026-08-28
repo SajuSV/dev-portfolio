@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="bg-dark section-logos__wrapper-items">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 col-sm-6" *ngFor="let logo of logos">
+          <div class="section-logos__item">
+            <img [src]="logo" width="324" height="200" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

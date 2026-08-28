@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="bg-dark">
+    <div class="container slider slider-testimonials">
+      <div class="row justify-content-between">
+        <div class="col-lg-10 order-lg-2">
+          <div class="swiper-container swiper" #swiperEl>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" *ngFor="let image of images">
+                <img [src]="image" width="1680" height="1120" loading="lazy" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-1 order-lg-1">
+          <div class="slider__controls">
+            <div class="slider__arrow slider-testimonials__arrow" #prevArrow>keyboard_arrow_up</div>
+            <div class="slider__dots">
+              <div
+                class="slider__dot"
+                *ngFor="let dot of dots; let i = index"
+                [class.slider__dot_active]="i === currentIndex - 1"
+                (click)="goTo(i)"
+              ></div>
+            </div>
+            <div class="slider__arrow slider-testimonials__arrow" #nextArrow>keyboard_arrow_down</div>
+          </div>
+        </div>
+        <div class="col-lg-1 align-self-end order-lg-3 d-none d-lg-block">
+          <div class="slider__counter-big">
+            <div class="swiper-container swiper slider__counter-big-current slider-testimonials__counter-big-current">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">{{ currentIndex < 10 ? '0' + currentIndex : currentIndex }}</div>
+              </div>
+            </div>
+            <div class="slider__counter-big-total">{{ total < 10 ? '0' + total : total }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

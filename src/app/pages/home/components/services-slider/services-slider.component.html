@@ -1,0 +1,64 @@
+<section class="section section-services">
+  <header class="section-header container" data-os-animation appOsAnimation>
+    <div class="row">
+      <div class="col">
+        <div class="section-header__label">
+          <div class="section-header__square"></div><span>What I Do</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h2>
+          I'm UI/UX developer who brings brands to life — moving between pixels and code, always chasing clean vibes
+          and sharp details.
+        </h2>
+      </div>
+    </div>
+  </header>
+
+  <div class="swiper-container swiper slider slider-services" data-os-animation #swiperEl>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let slide of slides">
+        <a class="figure-service" appFigureService>
+          <header class="figure-service__header">
+            <div class="figure-service__headline"></div>
+            <h3>{{ slide.title }}</h3>
+            <p style="color: #b68c70;">{{ slide.description }}</p>
+          </header>
+          <div class="figure-service__icon">
+            <div class="lnr" [ngClass]="slide.iconClass"></div>
+            <svg viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g fill="none" fill-rule="evenodd">
+                <g transform="translate(-134.000000, -98.000000)">
+                  <path class="circle" d="M135,174a75,75 0 1,0 150,0a75,75 0 1,0 -150,0"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="figure-service__number">{{ slide.number }}</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-auto">
+        <div class="slider__arrows">
+          <div class="slider__arrow" #prevArrow>keyboard_arrow_left</div>
+          <div class="slider__arrow" #nextArrow>keyboard_arrow_right</div>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="slider__progress">
+          <div class="slider__counter slider__counter_current">{{ currentIndex < 10 ? '0' + currentIndex : currentIndex }}</div>
+          <div class="slider__progressbar">
+            <div class="slider__progressbar-fill" #progressFill></div>
+          </div>
+          <div class="slider__counter slider__counter_total">{{ total < 10 ? '0' + total : total }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

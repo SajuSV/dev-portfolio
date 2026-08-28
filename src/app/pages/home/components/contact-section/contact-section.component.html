@@ -1,0 +1,35 @@
+<section class="section section-contact section_mt">
+  <header class="section-header container" data-os-animation appOsAnimation>
+    <div class="row">
+      <div class="col">
+        <div class="section-header__label">
+          <div class="section-header__square"></div><span>Let’s Create Together</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h2>
+          Let’s build something great together! Contact me at
+          <a href="mailto:{{ email }}">{{ email }}</a>
+        </h2>
+      </div>
+    </div>
+  </header>
+  <div class="" style="background-color: #181818;">
+    <div class="container">
+      <div class="row">
+        <a *ngFor="let card of cards" class="figure-contact-card col-lg-3 col-md-6" [attr.href]="card.href || null"
+          [attr.target]="card.target || null">
+          <header class="figure-service__header">
+            <div style="color: #b68c70; font-size: 25px;" class="lnr" [ngClass]="card.icon"></div>
+            <div class="figure-service__headline"></div>
+            <h3>{{ card.title }}</h3>
+            <p style="color: #b68c70; font-size: 14px;">{{ card.value }}</p>
+          </header>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>

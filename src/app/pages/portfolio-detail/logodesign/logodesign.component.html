@@ -1,0 +1,18 @@
+<article class="portfolio-details bg-light">
+  <app-portfolio-masthead pageTitle="Logo Design" tag="Photoshop"></app-portfolio-masthead>
+
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col">
+        <img class="img-fullwidth" [src]="heroImage" width="1760" height="1173" loading="lazy" alt="" />
+      </div>
+    </div>
+
+    <app-portfolio-options [options]="options"></app-portfolio-options>
+    <app-portfolio-quote [text]="quote"></app-portfolio-quote>
+  </div>
+
+  <app-logo-showcase-slider></app-logo-showcase-slider>
+
+  <app-portfolio-next-link nextPath="/webdev" nextTitle="Web Development"></app-portfolio-next-link>
+</article>
