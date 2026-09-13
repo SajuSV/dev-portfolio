@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
   styleUrl: './client-logos.component.css',
 })
 export class ClientLogosComponent {
-  readonly logos: string[] = ['infill', 'rp2', 'wac', 'pravasi', 'newcon', 'swarmlens'].map(
+  readonly logos: string[] = ['infill', 'rp2', 'wac', 'newcon', 'swarmlens', 'assurelens'].map(
     (name) => `assets/img/assets/sectionLogos/${name}.png`
   );
 }
